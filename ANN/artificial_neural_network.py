@@ -40,3 +40,18 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
+
+
+# Part 2: Building the ANN
+
+# Initialize the ANN
+ann = tf.keras.models.Sequential()
+
+# Add the input layer and first hidden layer
+ann.add(tf.keras.layers.Dense(units=6, activation='relu'))
+
+# Add the second hidden layer
+ann.add(tf.keras.layers.Dense(units=6, activation='relu'))
+
+# Add the output layer
+ann.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
