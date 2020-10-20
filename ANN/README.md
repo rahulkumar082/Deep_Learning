@@ -7,10 +7,10 @@
 * numpy
 * pandas
 * tensorflow
-* Label Encoder (encode target labels with value between 0 and n_classes-1, such as Gender)
-* Column Transformer (allows different columns or column subsets of the input to be transformed separately)
-* One Hot Encoder (encode categorical features as a numeric array)
-* Standard Scalar
+* LabelEncoder (encode target labels with value between 0 and n_classes-1, such as Gender)
+* ColumnTransformer (allows different columns or column subsets of the input to be transformed separately)
+* OneHotEncoder (encode categorical features as a numeric array)
+* StandardScalar
 
 ### Part 1: Data Preprocessing
 * Import the dataset using pandas.read_csv
