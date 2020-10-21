@@ -6,4 +6,4 @@ An artificial neural network (ANN) is the piece of a computing system designed t
 
 A well defined structure of ANN looks like:
 
-![](images/deep_neural_network.JPG)
+![](./images/deep_neural_network.JPG)
