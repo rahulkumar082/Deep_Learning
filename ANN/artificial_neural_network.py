@@ -55,3 +55,12 @@ ann.add(tf.keras.layers.Dense(units=6, activation='relu'))
 
 # Add the output layer
 ann.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
+
+
+# Part 3: Training the ANN
+
+# Compile the ANN
+ann.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Train the ANN on training set
+ann.fit(X_train, y_train, batch_size=32, epochs=100)
