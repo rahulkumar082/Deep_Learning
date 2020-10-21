@@ -49,9 +49,43 @@ Since now we have built the ANN, it is of little use without training. So let's 
     * batch_size for better results instead of single observations. Use default value: `32`
     * epochs for learn co-relations properly, can use `100`
 
-#### Output
+#### Training Process
 While the model is trained, the output is rendered as below:
 
-![](ann_training_epochs.JPG)
+![](./images/ann_training_epochs.JPG)
 
 Since we have kept the `epochs` value: `100`. It will continue 100 times and you can see as in image, accuracy will improve over multiple epochs.
+
+### Custom Input
+Now we can give our own customized input to the console, something like this:
+
+![](./images/input_val.JPG)
+
+We have to take care of Label Encoding and One Hot Encoder for categorical columns as we did in dataset preprocessing
+
+### Predicted Output
+Use `predict` function of ann object that will return the probability of exit of customer.
+
+The output of the above given input after the model is trained will be:
+
+![](./images/output_val.JPG)
+
+### Predicting Test set results
+Similarly, to predict the test set results, use `predict` function from ann object with parameter of `X_test`. Also for boolean output, we can use threshold value of 0.5, meanining if `y_pred` > 0.5 true else false.
+
+### Confusion Matrix and Accuracy Score
+To evaluate the performance of a classification model, let's use these functionalities from `sklearn.metrics` (evaluation is done on the basis of y_pred and y_test)
+
+#### Confusion Matrix:
+<table>
+  <tr>
+    <td>1515</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>202</td>
+    <td>203</td>
+  </tr>
+</table>
+
+#### Accuracy Score:  0.859
