@@ -13,7 +13,7 @@ A Convolutional Neural Network (ConvNet/CNN) is a Deep Learning algorithm which 
 
 Here is one famous image
 
-![](images/confused_person_image.jpg)
+![](images/confused_person_image.JPG)
 
 Here if we look at right side of the image, features appears in such a way that the person is looking at the right. While if we look at central part of image, features are more classified as person looking towards us.
 
@@ -21,7 +21,7 @@ The brain struggles to adjust the features and classify the image.
 
 Similarly, there is one more image
 
-![](images/duck_or_rabbit.jpg)
+![](images/duck_or_rabbit.JPG)
 
 Again, the brain struggles to classify the above image as rabbit or duck.
 
@@ -33,7 +33,7 @@ Again, the brain struggles to classify the above image as rabbit or duck.
 
 Here is the illustration:
 
-![](images/CNN_taking_image.jpg)
+![](images/CNN_taking_image.JPG)
 
 ### Convolution Operation
 We are given the below parameters for Convolution Operation:
@@ -47,7 +47,7 @@ and the output is
 
 An image to illustrate this:
 
-![](images/feature_detection.jpg)
+![](images/feature_detection.JPG)
 
 Based on multiple features, we can have different filters and therefore mulitple feature maps.
 
@@ -56,7 +56,7 @@ Rectifier Linear Unit (ReLU) helps break the linearity in the neural network, si
 
 After the convolution operation, the Feature Maps can output in both black (negative values) and white (positive values). The ReLU helps in achieving only non-negative values in Feature Maps.
 
-![](images/relu.jpg)
+![](images/relu.JPG)
 
 ### Pooling
 Suppose in some scenarios if the features are distorted or are not so much relative, our neural network should have flexibility to be able to find that feature.
