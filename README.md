@@ -70,9 +70,25 @@ Here we are able to preserve important features and reducing the overall size an
 Here is some fun part on [3D Visualization of a Convolutional Neural Network](https://www.cs.ryerson.ca/~aharley/vis/conv/) where we can draw some numbers and machine predicts which number is it.
 
 ### Flattening
+This is a process to put all of the pooled layers in a single input layer of future ANN. An image to illustrate the same.
+![](images/flattening.PNG)
 
 ### Full Connection
+In ANN, the hidden layers don't have to be fully connected. But in ConvNets we use the fully connected layers. Here each of the neurons fire up / vote upon observing the features that they resemble the most and helps the model to classify the image (Dogs vs Cats in given below image).
+
+![](images/fully_connected_layer.JPG)
 
 ### Extras: Softmax and Cross Entropy
+**Softmax function:**
 
+One interesting part that that how would the model know, for example, that probability of the image to be Dog is 95% and Cat being only 5% (from above example image). The answer is **THEY DON'T**. Instead here Softmax function comes to the rescue. Model just outputs the real value number _z_ (_z1_ for dog and _z2_ for cat, for instance). Then we just have to apply Softmax function and output will be in interval **(0,1)**.
+
+To quote wikipedia
+
+![](images/softmax_func.JPG)
+
+
+"Prior to applying softmax, some vector components could be negative, or greater than one; and might not sum to 1; but after applying softmax, each component will be in the interval ( 0 , 1 ) and the components will add up to 1, so that they can be interpreted as probabilities."
+
+**Cross Entropy**: Cross Entropy function is much better than Classification Error and Mean Squared Error. The reason being at the very start of back propagation, the output value is very very tiny. Due to this the gradient descent is very low and it will be hard for the Neural Network to adjust weight. But when we use cross entropy, we use _logarithms_ that help to understand the back propagation in a far better way (w.r.t. differences) than Mean Squared Error. 
 
